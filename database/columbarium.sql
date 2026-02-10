@@ -42,4 +42,4 @@ CREATE TABLE reservations (
 
 -- Sample Admin User
 INSERT INTO users (name, email, password, role) VALUES
-('Admin User', 'Romulo', '{PASSWORD_HASH_HERE}', 'admin');
+('Admin User', 'Romulo@church.com', '{PASSWORD_HASH_HERE}', 'admin');
