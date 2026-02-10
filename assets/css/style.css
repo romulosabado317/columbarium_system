@@ -1,0 +1,4 @@
+body { font-family: Arial, sans-serif; background: #f9f9f9; color: #333; }
+a { text-decoration: none; color: #007BFF; }
+button { padding: 8px 16px; margin: 5px; background: #007BFF; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
+.niche { width: 50px; height: 50px; display: inline-block; margin: 2px; text-align: center; line-height: 50px; color: #fff; cursor: pointer; }
