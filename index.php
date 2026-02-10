@@ -1,25 +1,19 @@
 <?php
-include('includes/db.php');
-session_start();
-if(isset($_POST['login'])){
-    $email = sanitize($_POST['email']);
-    $password = $_POST['password'];
-    $stmt = $conn->prepare("SELECT * FROM users WHERE email=?");
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
-    $result = $stmt->get_result()->fetch_assoc();
-    if($result && password_verify($password, $result['password'])){
-        $_SESSION['user_id'] = $result['id'];
-        $_SESSION['role'] = $result['role'];
-        header("Location: dashboard.php");
-        exit();
-    } else { $error = "Invalid credentials"; }
-}
+include('../includes/db.php');
+include('../includes/header.php');
 ?>
-<h2>Login</h2>
-<?php if(isset($error)){ echo '<p style="color:red;">'.$error.'</p>'; } ?>
-<form method="POST">
-<input type="email" name="email" placeholder="Email" required>
-<input type="password" name="password" placeholder="Password" required>
-<button type="submit" name="login">Login</button>
+<h1>Welcome to Maria Della Strada Columbarium</h1>
+<p style="text-align:center;">Explore niches, register, or login to reserve a niche for your loved ones.</p>
+<div style="text-align:center; margin:20px;">
+    <a href="search.php"><button>View Niches</button></a>
+    <a href="register.php"><button>Register</button></a>
+    <a href="login.php"><button>Login</button></a>
+</div>
+
+<h2>Search Niches</h2>
+<form method="GET" action="search.php" class="search-box">
+    <input type="text" name="q" placeholder="Search by floor, section, or number" required>
+    <button type="submit">Search</button>
 </form>
+
+<?php include('../includes/footer.php'); ?>
