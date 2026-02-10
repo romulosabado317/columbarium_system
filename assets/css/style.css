@@ -1,4 +1,97 @@
-body { font-family: Arial, sans-serif; background: #f9f9f9; color: #333; }
-a { text-decoration: none; color: #007BFF; }
-button { padding: 8px 16px; margin: 5px; background: #007BFF; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
-.niche { width: 50px; height: 50px; display: inline-block; margin: 2px; text-align: center; line-height: 50px; color: #fff; cursor: pointer; }
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Links and buttons */
+a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+button {
+    padding: 8px 16px;
+    margin: 5px;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Header and footer */
+header, footer {
+    background-color: #2E3B4E;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Navigation links */
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Headings */
+h1, h2 {
+    color: #2E3B4E;
+    margin: 10px 0;
+}
+
+/* Tables */
+table {
+    width: 90%;
+    margin: 10px auto;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #333;
+    padding: 8px;
+    text-align: center;
+}
+
+/* Niche blocks */
+.niche {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Forms */
+form {
+    margin: 10px auto;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form select, form button {
+    margin: 5px 0;
+    padding: 8px;
+    font-size: 14px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    table, .niche {
+        width: 100%;
+    }
+    .niche {
+        margin: 3px 0;
+    }
+}
